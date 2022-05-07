@@ -1,0 +1,8 @@
+*__pycache__/
+PRG1/
+.idea
+*sqlite3
+.env
+*.idea
+docker-compose.yaml
+setup.cfg

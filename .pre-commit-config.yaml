@@ -1,0 +1,41 @@
+default_stages: [ commit ]
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort (python)
+        entry: isort
+        language: python
+        language_version: python3
+        types: [ python ]
+        args: [ -v, --profile=black]
+  - repo: https://github.com/psf/black
+    rev: 21.10b0
+    hooks:
+      - id: black
+        name: black
+        entry: black
+        args: [ --line-length=88 ]
+        require_serial: true
+        types: [ python ]
+        language_version: python3.8
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.910-1
+    hooks:
+      - id: mypy
+        additional_dependencies: [
+            'pydantic',
+        ]
+        entry: mypy .
+        pass_filenames: false
+        language_version: python3.8
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        language_version: python3.8
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.16.0
+    hooks:
+      - id: gitlint
