@@ -4,7 +4,7 @@ from .flat import FlatViewSet
 from .rating import RatingViewSet
 from .rent import RentingViewSet
 from .user import CustomUserViewSet
-
+from .special_offer import SpecialOfferViewSet
 __all__ = [
     "PasswordChangeOrderViewSet",
     "CreateUserViewSet",
@@ -12,4 +12,5 @@ __all__ = [
     "RatingViewSet",
     "RentingViewSet",
     "CustomUserViewSet",
+    "SpecialOfferViewSet",
 ]

@@ -1,4 +1,5 @@
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import GenericViewSet
+from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin
 from rest_framework.response import Response
 
 from api.serializers import SpecialOfferSerializers
@@ -7,8 +8,11 @@ from api.permissions import OwnerOrReadOnly
 from flat.models import SpecialOffer
 
 
-class SpecialOfferViewSet(ModelViewSet):
-
+class SpecialOfferViewSet(CreateModelMixin,
+                          RetrieveModelMixin,
+                          UpdateModelMixin,
+                          DestroyModelMixin,
+                          GenericViewSet):
     serializer_class = SpecialOfferSerializers
     queryset = SpecialOffer.objects.all()
     permission_classes = OwnerOrReadOnly

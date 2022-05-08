@@ -6,7 +6,7 @@ from rest_framework.serializers import ModelSerializer
 from rest_framework.viewsets import ModelViewSet
 
 from api.filters import FlatFilter
-from api.mixins import CreateRatingMixin, ListRatingMixin
+from api.mixins import CreateRatingMixin, ListRatingMixin, ListSpecialOfferMixin
 from api.permissions import OwnerOrReadOnly
 from api.serializers import FlatSerializer
 from flat.models import Flat
@@ -72,7 +72,7 @@ tags = ["api/flat"]
     ),
     name="destroy",
 )
-class FlatViewSet(CreateRatingMixin, ListRatingMixin, ModelViewSet):
+class FlatViewSet(ListSpecialOfferMixin, CreateRatingMixin, ListRatingMixin, ModelViewSet):
     queryset = Flat.objects.all()
     serializer_class = FlatSerializer
     permission_classes = [OwnerOrReadOnly]

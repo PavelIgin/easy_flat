@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 from flat.messages import SPECIAL_OFFER_ALREADY_EXIST
 
+
 class SpecialOffer(models.Model):
     """
     Модель специальных предложения для выставки специальной стоимости в некоторые дни

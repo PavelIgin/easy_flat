@@ -16,7 +16,7 @@ Including another URLconf
 
 from rest_framework import routers
 
-from api.views import CustomUserViewSet, FlatViewSet, RatingViewSet, RentingViewSet
+from api.views import CustomUserViewSet, FlatViewSet, RatingViewSet, RentingViewSet, SpecialOfferViewSet
 
 router = routers.DefaultRouter()
 
@@ -24,4 +24,5 @@ router.register("flat", FlatViewSet, basename="flat")
 router.register("rent", RentingViewSet, basename="rent")
 router.register("rating", RatingViewSet, basename="rating")
 router.register("user", CustomUserViewSet, basename="user")
+router.register('special_offer', SpecialOfferViewSet, basename='special_offer')
 urlpatterns = [] + router.urls
