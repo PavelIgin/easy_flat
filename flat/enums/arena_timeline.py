@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from .base_enum import BaseEnum
 
 
-class ArenaTimeLine(BaseEnum):
+class RentTimeLine(BaseEnum):
     """
     Выбор краткосрочной или долгосрочной аренды
     """

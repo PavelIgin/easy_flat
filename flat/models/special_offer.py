@@ -10,6 +10,7 @@ class SpecialOffer(models.Model):
     Модель специальных предложения для выставки специальной стоимости в некоторые дни
     """
     flat = models.ForeignKey('Flat', on_delete=models.CASCADE)
+    # TODO сделать m2m-поле
     date = DateRangeField()
     cost = models.PositiveBigIntegerField()
 
