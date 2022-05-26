@@ -9,7 +9,7 @@ class SpecialOffer(models.Model):
     """
     Модель специальных предложения для выставки специальной стоимости в некоторые дни
     """
-    flat = models.ForeignKey('Flat', on_delete=models.CASCADE)
+    flat = models.ForeignKey('Flat', on_delete=models.CASCADE,related_name='special_offer')
     date = DateRangeField()
     cost = models.PositiveBigIntegerField()
 

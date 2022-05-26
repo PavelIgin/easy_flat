@@ -7,7 +7,7 @@ from django_filters import rest_framework as filter
 from django_filters.widgets import DateRangeWidget
 from psycopg2.extras import DateRange
 
-from flat.enums import ArenaTimeLine, OrderByFlat
+from flat.enums import RentTimeLine, OrderByFlat
 from flat.models import Flat
 
 from .date_range import CustomDateFromToRangeFilter
@@ -28,7 +28,7 @@ class FlatFilter(filter.FilterSet):
     rooms_count = filter.RangeFilter()
     total_area = filter.RangeFilter()
     max_guest = filter.RangeFilter()
-    arena_timeline = filter.ChoiceFilter(choices=ArenaTimeLine.choices)
+    rent_timeline = filter.ChoiceFilter(choices=RentTimeLine.choices)
     booked_days = CustomDateFromToRangeFilter(
         widget=DateRangeWidget(attrs={"placeholder": "%Y-%m-%d"}),
         method="filter_booked_days",
@@ -72,6 +72,6 @@ class FlatFilter(filter.FilterSet):
             "rooms_count",
             "total_area",
             "max_guest",
-            "arena_timeline",
+            "rent_timeline",
             "booked_days",
         ]

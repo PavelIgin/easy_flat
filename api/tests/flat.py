@@ -21,7 +21,7 @@ class FlatTestCase(ApiTestCase):
             "rooms_count": 3,
             "cost": 2332,
             "max_guest": 32,
-            "arena_timeline": "OneDay",
+            "rent_timeline": "OneDay",
             "total_area": 23,
         }
         self.authorize(self.admin_user)
@@ -49,7 +49,7 @@ class FlatTestCase(ApiTestCase):
             "total_area_max": 40,
             "max_guest_min": 12,
             "max_guest_max": 15,
-            "arena_timeline": "OneDay",
+            "rent_timeline": "OneDay",
             "booked_days_after": self.booked_days_after,
             "booked_days_before": self.booked_days_before,
             "order_by": "-cost",
@@ -71,7 +71,7 @@ class FlatTestCase(ApiTestCase):
             "rooms_count": 3422,
             "cost": 54353,
             "max_guest": 3122,
-            "arena_timeline": "OneDay",
+            "rent_timeline": "OneDay",
             "total_area": 2432,
         }
         self.authorize(self.admin_user)

@@ -4,8 +4,8 @@ from django.apps import apps
 
 @shared_task
 def send_create_user_code(code_id: int) -> None:
-    CreateUser = apps.get_model("user.SignUpOrder")
-    code = CreateUser.objects.get(id=code_id)
+    SignUpOrder = apps.get_model("user.SignUpOrder")
+    code = SignUpOrder.objects.get(id=code_id)
     code.send()
 
 

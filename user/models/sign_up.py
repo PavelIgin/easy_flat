@@ -60,8 +60,9 @@ class SignUpOrder(models.Model):
         )
         text = f"{CREATE_ACCOUNT_MESSAGE} {activation_url} {EXPIER_TOCKEN}"
         response = send_mail(
-            title, text, settings.EMAIL_HOST_USER, [self.email], fail_silently=True
+            title, text, from_email=settings.EMAIL_HOST_USER, recipient_list=[self.email], fail_silently=True
         )
+        print(response)
         return response
 
     @atomic

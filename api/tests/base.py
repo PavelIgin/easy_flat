@@ -36,7 +36,7 @@ class ApiTestCase(APITestCase, TestCase):
             rooms_count=3,
             cost=2332,
             max_guest=32,
-            arena_timeline="OneDay",
+            rent_timeline="OneDay",
             total_area=23,
             owner=self.admin_user,
         )
@@ -44,7 +44,7 @@ class ApiTestCase(APITestCase, TestCase):
             rooms_count=3,
             cost=2332,
             max_guest=14,
-            arena_timeline="OneDay",
+            rent_timeline="OneDay",
             total_area=23,
             owner=self.admin_user,
         )

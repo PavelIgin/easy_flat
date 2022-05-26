@@ -35,5 +35,4 @@ python manage.py runserver
 Запуск тестов:
 python manage.py test
 
-Технический стек:
-Описан в requrements.txt
+Инструкция к запуску:
