@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework_jwt",
-    "silk",
+   # "silk",
     "drf_yasg",
     "django_filters",
     "community",
@@ -67,7 +67,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "silk.middleware.SilkyMiddleware",
+#    "silk.middleware.SilkyMiddleware",
 ]
 
 ROOT_URLCONF = "easy_flat.urls"

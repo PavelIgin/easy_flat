@@ -35,5 +35,5 @@ urlpatterns = [
     path("user/", include("user.urls")),
     path("api/", include("api.urls")),
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="swagger"),
-    path("silk/", include("silk.urls", namespace="silk")),
+ #   path("silk/", include("silk.urls", namespace="silk")),
 ]

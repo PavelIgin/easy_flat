@@ -1,9 +1,8 @@
-from ubuntu:20.04
+from python:3.9.6-buster
 RUN apt-get update -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa -y
 
-RUN apt install python3.8 python3-pip libpq-dev python3-dev -y
 WORKDIR /easy_flat
 COPY ./requirements.txt ./requirements.txt
 RUN pip install --upgrade -r requirements.txt
@@ -15,5 +14,4 @@ WORKDIR $APP_HOME
 COPY ./entrypoint.sh .
 RUN sed -i 's/\r$//g' entrypoint.sh
 RUN chmod +x entrypoint.sh
-
 COPY . .
