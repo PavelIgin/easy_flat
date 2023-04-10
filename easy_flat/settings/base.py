@@ -127,6 +127,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+STATIC_FILES_DIR = os.environ.get('STATIC_FILES_DIR', default=None)
+STATIC_ROOT = os.environ.get('STATIC_FILES_DIR', default='staticfiles')
 STATIC_URL = "/static/"
 FRONTEND_URL = "http://127.0.0.1:8000/"
