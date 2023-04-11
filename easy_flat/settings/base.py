@@ -37,7 +37,7 @@ SECRET_KEY = get_env_value("SECRET_KEY", default="key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = get_env_value("DEBUG", default=True)
 
-ALLOWED_HOSTS: typing.List[str] = []
+ALLOWED_HOSTS: typing.List[str] = get_env_value("ALLOWED_HOSTS", default=True)
 
 # Application definition
 
